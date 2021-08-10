@@ -1,0 +1,579 @@
+*{
+   padding:0;
+   margin:0;
+   box-sizing: border-box; 
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+}
+.nav{
+    position: fixed;
+    z-index: 4;
+    top:0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top:1rem;
+   
+
+}
+
+.big-nav{
+    display: none;
+}
+.header{
+   
+    position: relative;
+    background-image: url(./img/jack-foster-WcUArCQXXYE-unsplash.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+   
+}
+
+.nav .logo{
+    margin:1rem;
+    width:3rem;
+    border-radius: 50%;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+
+
+
+.nav-bar {
+    
+	position: absolute;
+	background-color: #006fa0;
+	top: 0;
+	right: 100%;
+	height: 100vh;
+	width: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: position 2.9s;
+	-webkit-transition: position 2.9s;
+	-moz-transition: position 2.9s;
+	-ms-transition: position 2.9s;
+	-o-transition: position 2.9s;
+}
+
+.toggle {
+	left: 0;
+	box-shadow: 1px 0 15px 2px rgba(0, 0, 0, 0.4);
+
+}
+
+.toggle-menu {
+    
+	background-color:#006fa0;
+	position: fixed;
+	top: 40px;
+	right: 20px;
+	width: 40px;
+	height: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+    padding: 2px 2px 2px 3px;
+	border-radius: 5px;
+	cursor: pointer;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
+.line {
+	width: 100%;
+	height: 3px;
+	border-radius: 5px;
+	background-color: #fff;
+	transition: transform 0.2s ease-out;
+	-webkit-transition: transform 0.2s ease-out;
+	-moz-transition: transform 0.2s ease-out;
+	-ms-transition: transform 0.2s ease-out;
+	-o-transition: transform 0.2s ease-out;
+}
+
+.toggle .line1 {
+	background-color: #fff;
+	transform: scale(0.9) rotateZ(-45deg) translate(-6px, 4px);
+}
+
+.toggle .line2 {
+	display: none;
+}
+
+.toggle .line3 {
+	background-color: #fff;
+	transform: scale(0.9) rotateZ(45deg) translate(-6px, -4px);
+}
+
+.toggle .toggle-menu {
+	background-color: #006fa0;
+}
+
+.nav-list {
+	list-style: none;
+}
+
+.nav-list-item {
+	text-align: center;
+	padding: 10px 0;
+    margin:25px 0;
+}
+
+.nav-link {
+	color: #fff;
+	font-size: 22px;
+	text-decoration: none;
+	position: relative;
+	padding-bottom: 4px;
+}
+
+.nav-link::before {
+	position: absolute;
+	content: '';
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #fff;
+	transform: scaleX(0);
+	transition: transform 0.4s ease-in-out;
+	transform-origin: left;
+	-webkit-transition: transform 0.4s ease-in-out;
+	-moz-transition: transform 0.4s ease-in-out;
+	-ms-transition: transform 0.4s ease-in-out;
+	-o-transition: transform 0.4s ease-in-out;
+}
+
+.nav-link:hover::before {
+	transform: scaleX(1);
+}
+
+.landing{
+    
+    z-index: 2;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.landing-text{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    color:#fff;
+}
+
+.landing-text h3{
+    letter-spacing: 10px;
+    font-size: 0.5rem;
+    line-height: 2;
+    font-weight: 400;
+    margin:2rem 0;
+}
+
+.landing-text h1{
+    font-family: 'Gothic A1', sans-serif;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    color: transparent;
+    -webkit-text-fill-color: transparent; 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    font-weight: 500;
+    padding:0;
+}
+
+
+.overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    background: rgb(75,108,183);
+    background: linear-gradient(270deg, rgba(75,108,183,0.5) 0%, rgba(24,40,72,1) 100%);
+}
+
+.landing-text h2{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.landing-buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.landing-buttons a{
+    text-decoration: none;
+    color:#fff;
+    margin:1rem;
+    font-size: 1.2rem;
+    border:3px solid #fff;
+    padding:0.2rem 0.5rem;
+    border-radius: 10px;
+    transition: 0.5s ease ;
+}
+
+.landing-buttons a:hover{
+    background-color: #fff;
+    color:#006fa0;
+}
+
+section{
+    width:100%;
+    height: 100%;
+    background: #006fa0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.about-us{
+    padding: 1rem;
+    text-align: left;
+    color:#fff;
+    line-height: 2;
+   
+}
+
+.about-us p{
+    text-align: center;
+}
+
+
+.separator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    font-size: 0.8rem;
+}
+
+
+.development{
+    padding:7rem 2rem;
+    background-image: url(./img/ben-kolde-bs2Ba7t69mM-unsplash.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+}
+
+.details{
+    width: 80vw;
+    border-radius: 15px;
+    border:3px solid #fff;
+    position: relative;
+    z-index: 2;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    text-align: center;
+}
+
+.details .profile{
+    width:5rem;
+    height:5rem;
+    border:3px solid #fff;
+    border-radius: 10px;
+    top:-50px;
+    position: absolute;
+    width: 30%;
+    background-image: url(./img/alin_profile.jpg);
+    background-position:right center;
+    background-size: cover;
+}
+
+.details h2{
+    z-index: 3;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    background-color: rgba(75,108,183, 0.6);
+    padding:0.5rem 2rem;
+}
+
+.details a{
+    text-decoration:underline;
+    color:#fff;
+    margin-top:1rem;
+}
+
+.photography{
+    padding:7rem 2rem;
+    background-image: url(./img/zoe-graham-fixEln2_j-I-unsplash.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+}
+
+.photography .details .profile{
+    background-image: url(./img/Mia_Profile.jpg);
+}
+
+.services{
+    padding:2rem 0;
+}
+
+.services-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:1rem 1.5rem;
+    text-align: center;
+}
+
+.services-list ul{
+    text-align: left;
+    color:#fff;
+}
+
+.services-list li{
+    margin: 1.5rem;
+    list-style: none;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.services-list i{
+    margin-right: 0.3rem;
+}
+
+.services-separator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    font-size: 0.5rem;
+    color:#fff;
+}
+
+.services-separator .decoration{
+    background: #fff;
+}
+
+.services h2{
+    font-size: 2rem;
+}
+
+.services p{
+    color:#fff;
+}
+
+.services a{
+    color: #fff;
+}
+
+.contact{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./img/markus-winkler-q3QPw37J6Xs-unsplash.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: color;
+    width: 100vw;
+    height: auto;
+    color:#fff;
+}
+
+.contact h2{
+    z-index: 2;
+    margin:1rem;
+}
+
+form{
+    max-width: 50rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    margin-top: 1rem;
+    text-align: left;
+}
+
+input,textarea{
+    max-width:100vw;
+    margin-bottom: 1rem;
+    outline: none;
+    border-radius: 10px;
+    border:none;
+    padding: 0.5rem;
+}
+
+.contact .btn{
+    text-decoration: none;
+    color:#fff;
+    background: transparent;
+    margin:1rem;
+    font-size: 1.2rem;
+    border:3px solid #fff;
+    padding:0.2rem 0.5rem;
+    border-radius: 10px;
+    transition: 0.5s ease ;
+}
+
+.contact .btn:hover{
+    background-color: #fff;
+    color:#000;
+}
+
+form h2{
+    text-align: center;
+    font-weight: 200;
+}
+
+.follow{
+    padding:2rem ;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.follow a{
+    display: inline-block;
+    color:#fff;
+    margin: 1rem;
+    font-size: 1.2rem;
+}
+
+footer{
+    background-color: #006fa0;
+    text-align: center;
+    padding:2rem;
+    color:#fff;
+}
+
+@media screen and (min-width: 425px){
+    .details .profile{
+        width:6rem;
+        height:7rem;
+    }
+
+    input,textarea{
+        width:35rem;
+    }
+
+}
+@media screen and (min-width: 425px){
+    .services-list{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+}
+@media screen and (min-width: 1024px){
+    .toggle-menu {
+        display: none;
+    }
+    
+    .nav{
+        background: rgba(0, 111, 160, 0.3);
+       
+        height: auto;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .big-nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+       padding: 0 2rem;
+        
+    }
+
+    .big-nav li{
+        list-style: none;
+        margin:1rem;
+        
+    }
+
+    .big-nav a{
+        font-size: 1rem;
+    }
+
+    .services-list{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+
+    .about-us p{
+        height:100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: left;
+        padding:5rem 10rem;
+        font-size: 1.5rem;
+        
+    }
+
+   
+}
+@media screen and (min-width: 1440x){
+    .details{
+        padding:6rem;
+    }
+}
+
+
+
+
+
